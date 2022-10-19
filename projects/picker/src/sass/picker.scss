@@ -738,9 +738,15 @@ $owl-missing: yellowgreen !default;
 
   &.isActive {
     border-color: $owl-accent-color;
+    outline: none;
+    background: $owl-light-selected-bg;
+    opacity: 1;
+
+    @include darkTheme(true) {
+      background: $owl-dark-light-selected-bg;
+    }
   }
 
-  &:focus,
   &:hover {
     outline: none;
     background: $owl-light-selected-bg;
